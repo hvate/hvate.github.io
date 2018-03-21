@@ -282,6 +282,323 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/d180320/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hvate Huo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/21/d180320/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-21T15:24:50+08:00">
+                2018-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/21/d180320/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="计算机基础学习"><a href="#计算机基础学习" class="headerlink" title="计算机基础学习"></a>计算机基础学习</h1><h2 id="内存结构"><a href="#内存结构" class="headerlink" title="内存结构"></a>内存结构</h2><ul>
+<li><p>内存部件</p>
+<p>主存储器(简称主存和内存)</p>
+<p>包括：存储体、逻辑部件、控制电路.</p>
+<p>存储单元：包括多个存储元件.</p>
+<p>​           cpu访问存储器的基本单位.</p>
+<p>​          可存储一串二进制代码,二进制代码的位数称为存储字长.</p>
+<p>​          每一个存储单元都有一个编号,称为存储单元的地址号.</p>
+<p>存储元件：存储一位二进制代码(0或1)</p>
+<p>​                  </p>
+</li>
+<li><p>2个寄存器</p>
+<p>MAR：用来存放欲访问的存储单元的地址,其位数对应存储单元个数.</p>
+<p>MDR：其位数与存储字长相等.</p>
+</li>
+<li><p>牢记</p>
+<p>内存的地址单元是一个字节(Byte)</p>
+</li>
+</ul>
+<h2 id="汇编指令"><a href="#汇编指令" class="headerlink" title="汇编指令"></a>汇编指令</h2><ul>
+<li><p>2个指令4种形式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov ax,18                                     </span><br><span class="line">add ax,8</span><br><span class="line">mov ax,bx</span><br><span class="line">add ax,bx</span><br></pre></td></tr></table></figure>
+<p>以上4条指令等价于高级语言语句如下:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Ax = <span class="number">18</span>;</span><br><span class="line">AX = Ax +<span class="number">18</span>;</span><br><span class="line">AX = Bx;</span><br><span class="line">Ax = Ax + Bx;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>汇编练习题</p>
+<ul>
+<li><p>根据已学的指令,最多使用4条指令,编写计算2的4次方.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov ax,2</span><br><span class="line">add ax,ax</span><br><span class="line">add ax,ax</span><br><span class="line">add ax,ax</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>计算地址偏移量</p>
+<p>给定地址段为0001H,仅通过变化偏移量寻址,CPU的寻址范围为:</p>
+<p>物理地址=SA*16 + EA</p>
+<p>EA的变化范围为0h ~ FFFFh</p>
+<p>物理地址范围为:(SA <em> 16 + 0h) ~ (SA </em> 16 + FFFFh)</p>
+<p>= 0010h ~ 1000Fh</p>
+<p>进一步解释:</p>
+<p>CPU的寻址能力和地址总线的宽度(即地址总线的位数)有关.假设CPU的寻址上限为Max,</p>
+<p>地址总线的宽度为N,那么:Max = 2^N,即CPU的寻址范围为:0 ~ 2^N.</p>
+<p>即CPU的寻址范围为:0x0000h ~ 0xFFFFh.</p>
+<p>假设你使用的CPU的地址总线为16位,那么偏移地址的变化范围为:0x0000h ~ oxFFFFFh.</p>
+<p>给定的段地址为0x0001h,则CPU的寻址范围为:</p>
+<p>(0x0000h + 0x0001h) ~ (0xFFFFh + 0x0001h) = 0x0001h ~ 0x10000h.</p>
+<p>据说：物理地址=段地址 * 16 + 偏移地址</p>
+<p>那实际CPU的寻址范围为:</p>
+<p>(0x0000h + 0x0001h <em> 16) ~ (0xFFFFh + 0x0001h </em> 16)</p>
+<p>= 0x0010h ~ 0x1000Fh.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="常见进制后缀"><a href="#常见进制后缀" class="headerlink" title="常见进制后缀"></a>常见进制后缀</h2><ul>
+<li>二进制b（binary）</li>
+<li>八进制o（octal）</li>
+<li>十进制d（decimal）</li>
+<li>十六进制h（hexdecimal）</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/d180321/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hvate Huo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/21/d180321/" itemprop="url">d180321</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-21T15:23:25+08:00">
+                2018-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/21/d180321/" class="leancloud_visitors" data-flag-title="d180321">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -454,7 +771,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -555,7 +872,7 @@
     NexT.Mist
   </a> 
   <div class="powered-by"></div>
-  <span class="post-count">total:78 words.</span>
+  <span class="post-count">total:605 words.</span>
   
   <span id="busuanzi_container_site_uv">
     本站访客数<span id="busuanzi_value_site_uv"></span>人次
