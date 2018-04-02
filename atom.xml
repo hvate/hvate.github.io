@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-28T06:56:26.573Z</updated>
+  <updated>2018-04-02T01:03:30.373Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,29 +17,16 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>20180321</title>
-    <link href="http://yoursite.com/2018/03/28/20180321/"/>
-    <id>http://yoursite.com/2018/03/28/20180321/</id>
-    <published>2018-03-28T06:51:26.000Z</published>
-    <updated>2018-03-28T06:56:26.573Z</updated>
-    
-    <content type="html"><![CDATA[<p>#hello world</p><p>##你好</p>]]></content>
+    <title>20180402</title>
+    <link href="http://yoursite.com/2018/04/02/20180402/"/>
+    <id>http://yoursite.com/2018/04/02/20180402/</id>
+    <published>2018-04-02T01:02:56.000Z</published>
+    <updated>2018-04-02T01:03:30.373Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;#hello world&lt;/p&gt;
-&lt;p&gt;##你好&lt;/p&gt;
-
-      
-    
     </summary>
     
-      <category term="Hexo教程" scheme="http://yoursite.com/categories/Hexo%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="computer" scheme="http://yoursite.com/tags/computer/"/>
     
   </entry>
   
